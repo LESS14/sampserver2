@@ -10,7 +10,9 @@ enum PlayerInfos {
     Float:pPosA,
     pTentativasLogin, 
     pTentativasRegistro,
-    bool:pLogado
+    bool:pLogado,
+    pAdmin,
+    pCor
 }
 
 new PlayerData[MAX_PLAYERS][PlayerInfos];

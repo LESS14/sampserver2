@@ -1,17 +1,24 @@
-#include <a_mysql>
-#include <../../modules/database.inc>
+#tryinclude <a_mysql>
+#tryinclude <../../modules/database.inc>
+#tryinclude <../../modules/serverinfo.inc>
+#tryinclude <../../modules/macros.inc>
+#tryinclude <../../modules/mensagens.inc>
+#tryinclude <../../modules/cores.inc>
+#tryinclude <../../modules/forwards.inc>
 
 
-#define HOST "localhost"
-#define USER "root"
-#define DTBS "servidor"
-#define PASS ""
 #define Dialog_Login 0
 #define Dialog_Registro 1
 new MySQL:ConexaoSQL;
 
 
 hook OnGameModeInit() {
+    // Informações do servidor
+    SendRconCommand("hostname "#SERVER_NAME"");
+    SendRconCommand("mapname "#SERVER_MAP"");
+    SendRconCommand("language "#SERVER_LANGUAGE"");
+    SendRconCommand("gamemodetext "#SERVER_MODE"");
+
     ConexaoSQL = mysql_connect(HOST, USER, PASS, DTBS);
     if(mysql_errno(ConexaoSQL) != 0) {
         print("[MySQL] Falha ao tentar estabelecer conexão com o banco de dados.");
@@ -21,6 +28,24 @@ hook OnGameModeInit() {
     return 1;
 }
 
+hook OnPlayerText(playerid, text[]) {
+    static texto[256], chat[256], chatdecode[256];
+
+    utf8encode(texto, text);
+
+    if(PlayerData[playerid][pAdmin] >= 1) {
+        utf8decode(chatdecode, texto);
+        format(chat, sizeof(chat), "%s  {FFFFFF}[%d] {FFFFFF}"#TAG_ADMIN" {FFFFFF}%s", GetPlayerNameEx(playerid), playerid, chatdecode);
+
+        SendClientMessageToAll(GetPlayerColor(playerid), chat);
+    } else {
+        utf8decode(chatdecode, texto);
+        format(chat, sizeof(chat), "%s  {FFFFFF}[%d] {FFFFFF} {FFFFFF}%s", GetPlayerNameEx(playerid), playerid, chatdecode);
+
+        SendClientMessageToAll(GetPlayerColor(playerid), chat);
+    }
+    return 0;
+}
 
 hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]) {
     new Query[125];
@@ -92,6 +117,8 @@ public VerificarContaSQL(playerid)
         cache_get_value_name(0, "pSenha", PlayerData[playerid][pSenha], 24); // Já puxa a senha pra comparar se é igual a que ele vai digitar no dialog.
         ShowPlayerDialog(playerid, Dialog_Login, DIALOG_STYLE_PASSWORD, "Login", "Digite sua senha para entrar em nosso servidor.", "Confirmar", "Sair");
     } else {
+        SetPlayerColor(playerid, Branco);
+        PlayerData[playerid][pCor] = HexToInt(Branco);
         ShowPlayerDialog(playerid, Dialog_Registro, DIALOG_STYLE_INPUT, "Registro", "Digite uma senha para se registrar em nosso servidor", "Registrar", "Sair");
     }
     return 1;
@@ -110,6 +137,18 @@ public InserirDadosSQL(playerid) {
     return 1;
 }
 
+function IntToHex(int) {
+    static str[15];
+    format(str, sizeof(str), "%x", int);
+    return str;
+}
+
+function HexToInt(hex) {
+    static str[15];
+    format(str, sizeof(str), "%i", hex);
+    return strval(str);
+}
+
 public CarregarContaSQL(playerid) {
     PlayerData[playerid][pLogado] = true;
 
@@ -121,6 +160,7 @@ public CarregarContaSQL(playerid) {
     cache_get_value_float(0, "pPosY", PlayerData[playerid][pPosY]);
     cache_get_value_float(0, "pPosZ", PlayerData[playerid][pPosZ]);
     cache_get_value_float(0, "pPosA", PlayerData[playerid][pPosA]);
+    cache_get_value_int(0, "pAdmin", PlayerData[playerid][pAdmin]);
 
     SetPlayerScore(playerid, PlayerData[playerid][pScore]);
     GivePlayerMoney(playerid, PlayerData[playerid][pDinheiro]);
@@ -129,6 +169,7 @@ public CarregarContaSQL(playerid) {
     SpawnPlayer(playerid);
 
     SetPlayerSkin(playerid, PlayerData[playerid][pSkin]);
+    SetPlayerColor(playerid, PlayerData[playerid][pCor]);
 
     return 1;
 }
@@ -152,14 +193,18 @@ public SalvarContaSQL(playerid) {
     `pPosX`='%f', \
     `pPosY`='%f', \
     `pPosZ`='%f', \
-    `pPosA`='%f' WHERE `pID`='%i'", PlayerData[playerid][pDinheiro],
+    `pPosA`='%f' WHERE `pID`='%i', \
+    `pAdmin`='%i', \
+    `pCor`='%i'", PlayerData[playerid][pDinheiro],
                                     PlayerData[playerid][pScore],
                                     PlayerData[playerid][pSkin],
                                     PlayerData[playerid][pPosX],
                                     PlayerData[playerid][pPosY],
                                     PlayerData[playerid][pPosZ],
                                     PlayerData[playerid][pPosA],
-                                    PlayerData[playerid][pID]);
+                                    PlayerData[playerid][pID],
+                                    PlayerData[playerid][pAdmin],
+                                    PlayerData[playerid][pCor]);
     mysql_query(ConexaoSQL, Query);
 
     printf("[MYSQL] Dados do Jogador %s ID %d salvo com sucesso", GetPlayerNameEx(playerid), PlayerData[playerid][pID]);
