@@ -7,3 +7,198 @@ SA-MP Dedicated Server
 ----------------------
 v0.3.7-R2, (C)2005-2015 SA-MP Team
 
+[06:30:18] hostname = "SA-MP Server"  (string)
+[06:30:18] 
+[06:30:18] Server Plugins
+[06:30:18] --------------
+[06:30:18]  Loading plugin: sscanf
+[06:30:18] 
+[06:30:18]  ===============================
+[06:30:18] 
+[06:30:18]       sscanf plugin loaded.     
+[06:30:18] 
+[06:30:18]          Version: 2.13.8
+[06:30:18] 
+[06:30:18]    (c) 2022 Alex "Y_Less" Cole  
+[06:30:18] 
+[06:30:18]  ===============================
+[06:30:18] 
+[06:30:18]   Loaded.
+[06:30:18]  Loading plugin: mysql
+[06:30:18]  >> plugin.mysql: R41-4 successfully loaded.
+[06:30:18]   Loaded.
+[06:30:18]  Loaded 2 plugins.
+
+[06:30:18] 
+[06:30:18] Filterscripts
+[06:30:18] ---------------
+[06:30:18]   Loaded 0 filterscripts.
+
+[06:30:18]  
+[06:30:18]  
+[06:30:18]          ==============================================================
+[06:30:18]          |                                                            |
+[06:30:18]          |                                                            |
+[06:30:18]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[06:30:18]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[06:30:18]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[06:30:18]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[06:30:18]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[06:30:18]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[06:30:18]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[06:30:18]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[06:30:18]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[06:30:18]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[06:30:18]          |           Y:::::Y                    S:::::S   I::::I      |
+[06:30:18]          |           Y:::::Y                    S:::::S   I::::I      |
+[06:30:18]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[06:30:18]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[06:30:18]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[06:30:18]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[06:30:18]          |                                                            |
+[06:30:18]          |                                                            |
+[06:30:18]          |                      (c) 2021 MPL v1.1                     |
+[06:30:18]          |            Alex "Y_Less" Cole and contributors.            |
+[06:30:18]          |                                                            |
+[06:30:18]          |                                                            |
+[06:30:18]          ==============================================================
+[06:30:18]  
+[06:30:18]  
+[06:30:18]  ========================================== 
+[06:30:18]  |                                        | 
+[06:30:18]  |  Missing YSI scriptfiles directories:  | 
+[06:30:18]  |                                        | 
+[06:30:18]  |      /scriptfiles/YSI/fixes/           | 
+[06:30:18]  |      /scriptfiles/YSI/temp/            | 
+[06:30:18]  |                                        | 
+[06:30:18]  ========================================== 
+[06:30:18]  |                                        | 
+[06:30:18]  |   Generating code, this may take a     | 
+[06:30:18]  |  little bit of time.  Note that this   | 
+[06:30:18]  |  code generation works best with the   | 
+[06:30:18]  |     JIT plugin, which you are not      | 
+[06:30:18]  |     currently using.  Get it here:     | 
+[06:30:18]  |                                        | 
+[06:30:18]  |       https://git.io/jit-plugin        | 
+[06:30:18]  |                                        | 
+[06:30:18]  |             Please wait...             | 
+[06:30:18]  |                                        | 
+[06:30:18]  |             Done in 6ms!               | 
+[06:30:18]  |                                        | 
+[06:30:18]  ========================================== 
+[06:30:18]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[06:30:18]  |                                        | 
+[06:30:18]  | Server:      0.3.7-R2 (W)              | 
+[06:30:18]  | Started:     19 Nov 2023 - 06:30:18    | 
+[06:30:18]  |                                        | 
+[06:30:18]  | Compiler:    3.10.10 (Windows)         | 
+[06:30:18]  | Includes:    0.3.7                     | 
+[06:30:18]  | Codepage:    <none>                    | 
+[06:30:18]  | Built:       19 Nov 2023 - 06:29:59    | 
+[06:30:18]  |                                        | 
+[06:30:18]  | YSI:         v05.09.0982               | 
+[06:30:18]  | Master:      -1                        | 
+[06:30:18]  |                                        | 
+[06:30:18]  | JIT:         <none>                    | 
+[06:30:18]  | Crashdetect: <none>                    | 
+[06:30:18]  |                                        | 
+[06:30:18]  ========================================== 
+[06:30:18]  |                                        | 
+[06:30:18]  | Unable to check the latest YSI version | 
+[06:30:18]  | - please watch the forums and github:  | 
+[06:30:18]  |                                        | 
+[06:30:18]  |          https://git.io/5.x            | 
+[06:30:18]  |                                        | 
+[06:30:18]  ========================================== 
+[06:30:18]  
+[06:30:18]  
+[06:30:18] [MySQL] Sucesso ao conectar com o banco de dados.
+[06:30:18] Number of vehicle models: 0
+[06:30:54] [connection] incoming connection: 127.0.0.1:58182 id: 0
+[06:30:54] [join] Felipe_ has joined the server (0:127.0.0.1)
+[06:30:57] [MYSQL] Jogador Felipe_ registrado como ID 2
+[06:31:03] [MYSQL] Dados do Jogador Felipe_ ID 2 salvo com sucesso
+[06:31:03] [part] Felipe_ has left the server (0:1)
+[06:31:21] [connection] incoming connection: 127.0.0.1:49969 id: 0
+[06:31:22] [join] Felipe_ has joined the server (0:127.0.0.1)
+Console input: gmx
+[06:41:03] [MYSQL] Dados do Jogador Felipe_ ID 2 salvo com sucesso
+[06:41:15]  
+[06:41:15]  
+[06:41:15]          ==============================================================
+[06:41:15]          |                                                            |
+[06:41:15]          |                                                            |
+[06:41:15]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[06:41:15]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[06:41:15]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[06:41:15]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[06:41:15]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[06:41:15]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[06:41:15]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[06:41:15]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[06:41:15]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[06:41:15]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[06:41:15]          |           Y:::::Y                    S:::::S   I::::I      |
+[06:41:15]          |           Y:::::Y                    S:::::S   I::::I      |
+[06:41:15]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[06:41:15]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[06:41:15]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[06:41:15]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[06:41:15]          |                                                            |
+[06:41:15]          |                                                            |
+[06:41:15]          |                      (c) 2021 MPL v1.1                     |
+[06:41:15]          |            Alex "Y_Less" Cole and contributors.            |
+[06:41:15]          |                                                            |
+[06:41:15]          |                                                            |
+[06:41:15]          ==============================================================
+[06:41:15]  
+[06:41:15]  
+[06:41:15]  ========================================== 
+[06:41:15]  |                                        | 
+[06:41:15]  |  Missing YSI scriptfiles directories:  | 
+[06:41:15]  |                                        | 
+[06:41:15]  |      /scriptfiles/YSI/fixes/           | 
+[06:41:15]  |      /scriptfiles/YSI/temp/            | 
+[06:41:15]  |                                        | 
+[06:41:15]  ========================================== 
+[06:41:15]  |                                        | 
+[06:41:15]  |   Generating code, this may take a     | 
+[06:41:15]  |  little bit of time.  Note that this   | 
+[06:41:15]  |  code generation works best with the   | 
+[06:41:15]  |     JIT plugin, which you are not      | 
+[06:41:15]  |     currently using.  Get it here:     | 
+[06:41:15]  |                                        | 
+[06:41:15]  |       https://git.io/jit-plugin        | 
+[06:41:15]  |                                        | 
+[06:41:15]  |             Please wait...             | 
+[06:41:15]  |                                        | 
+[06:41:15]  |             Done in 6ms!               | 
+[06:41:15]  |                                        | 
+[06:41:15]  ========================================== 
+[06:41:15]  |                                        | 
+[06:41:15]  | Server:      0.3.7-R2 (W)              | 
+[06:41:15]  | Started:     19 Nov 2023 - 06:41:15    | 
+[06:41:15]  |                                        | 
+[06:41:15]  | Compiler:    3.10.10 (Windows)         | 
+[06:41:15]  | Includes:    0.3.7                     | 
+[06:41:15]  | Codepage:    <none>                    | 
+[06:41:15]  | Built:       19 Nov 2023 - 06:40:52    | 
+[06:41:15]  |                                        | 
+[06:41:15]  | YSI:         v05.09.0982               | 
+[06:41:15]  | Master:      -1                        | 
+[06:41:15]  |                                        | 
+[06:41:15]  | JIT:         <none>                    | 
+[06:41:15]  | Crashdetect: <none>                    | 
+[06:41:15]  |                                        | 
+[06:41:15]  ========================================== 
+[06:41:15]  |                                        | 
+[06:41:15]  | Unable to check the latest YSI version | 
+[06:41:15]  | - please watch the forums and github:  | 
+[06:41:15]  |                                        | 
+[06:41:15]  |          https://git.io/5.x            | 
+[06:41:15]  |                                        | 
+[06:41:15]  ========================================== 
+[06:41:15]  
+[06:41:15]  
+[06:41:15] [MySQL] Sucesso ao conectar com o banco de dados.
+[06:41:15] Number of vehicle models: 0
